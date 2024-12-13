@@ -1,0 +1,66 @@
+@keyframes bounce {
+    0%, 100% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+  }
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+  .animate-pulse {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .bg-image{
+    background-image: url('https://i.pinimg.com/736x/fc/81/92/fc8192fbc3821304ec6a776d69dbb378.jpg');
+    filter: brightness(1.50);
+    /* backdrop-filter: brightness(40%); */
+    background-position:  center;
+
+  }
+
+  .header1{
+    /* color: #02010100; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    color: transparent;
+    font-size: 160px;
+    font-weight: 600;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-text-stroke-width: 1px;
+    stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    stroke: #fff;
+    /* text-transform: uppercase; */
+  }
+  .header2{
+    /* backdrop-filter: none;
+    backdrop-filter: brightness(10); */
+    font-weight: 800;
+    filter: brightness(1.75);
+    line-height: 1em;
+    transform: rotate3d(1,1,1,1deg);
+  }
+
+  form input, form select {
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #333;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus, form select:focus {
+    border-color: #3b82f6;
+    background-color: #2a2a2a;
+}
+
+form button {
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #2563eb;
+}

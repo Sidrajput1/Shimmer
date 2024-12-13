@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+#main {
+	background: linear-gradient(
+	  -75deg,
+	  #ff0000, 
+	  #fff, 
+	  #fff68f, 
+	  #800080  
+	);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  }
+
+  @keyframes gradient {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+
+ 
+    /* .nav-item {
+        @apply hover:bg-orange-600 hover:text-white px-3 py-2 rounded-md text-md uppercase font-bold transition duration-300;
+    }
+    .dropdown-item {
+        @apply block px-4 py-2 text-sm hover:bg-gray-200 transition duration-300;
+    }
+    .mobile-item {
+        @apply block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 hover:text-white;
+    } */
+
+	/* .neon-effect {
+		color: #ff3c00;
+		text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff6f00, 0 0 20px #ff5500, 0 0 40px #00ffcc;
+	}
+	
+	.neon-effect:hover {
+		color: #ff00cc;
+		text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 40px #ff00cc;
+	}
+	 */
+
+	 .neon-effect {
+		position: relative;
+		text-shadow: 0 0 5px #fff, 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+		transition: text-shadow 0.3s ease, color 0.3s ease;
+	  }
+	  
+	  .neon-effect:hover {
+		text-shadow: 0 0 10px #fff, 0 0 20px #ff6b6b, 0 0 30px #ff6b6b, 0 0 40px #ff6b6b;
+		color: #ff6b6b;
+	  }
+	  
+	  .group-hover .neon-effect {
+		text-shadow: 0 0 10px #fff, 0 0 20px #ff6b6b;
+	  }
+	  
