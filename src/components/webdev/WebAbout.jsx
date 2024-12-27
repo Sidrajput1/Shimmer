@@ -2,10 +2,10 @@ import React from "react";
 
 function WebAbout() {
   return (
-    <div className="bg-black text-white py-16 px-6 lg:px-20 ">
+    <div className="bg-sky-950 text-white md:py-16 py-6 px-6 lg:px-20 ">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <section className="space-y-4 relative">
-        <div className="relative top-36">
+        <div className="relative md:top-36 top-28">
             <img
               src="https://html.kodesolution.com/2024/mizox-php/images/resource/about-6.jpg" // Replace with your first image URL
               alt="Team Meeting"
@@ -53,10 +53,10 @@ function WebAbout() {
               </p>
             </div>
           </div>
-          <div className="pt-4 border-t border-gray-700">
+          {/* <div className="pt-4 border-t border-gray-700">
             <p className="text-5xl font-extrabold text-indigo-400">868800</p>
             <p className="text-gray-400">Professional and Skilled Contractors</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

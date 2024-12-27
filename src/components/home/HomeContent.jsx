@@ -207,7 +207,7 @@ function HomeContent() {
             <motion.img
               src={sliderData[currentIndex].image}
               alt={sliderData[currentIndex].title}
-              className="w-[700px] h-[450px] object-cover rounded-xl  hover:scale-105"
+              className="md:w-[700px] w-[600px] h-[450px] md:object-cover object-contain rounded-xl  hover:scale-105"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.8 }}

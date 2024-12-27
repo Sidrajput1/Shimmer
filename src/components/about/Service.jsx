@@ -7,6 +7,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import React from "react";
+import { Helmet } from "react-helmet";
 
 function Service() {
   const serviceDetails = [
@@ -96,6 +97,27 @@ function Service() {
   ];
   return (
     <div>
+        <Helmet>
+        <title>services - Shimmer Softech</title>
+        <meta
+          name="description"
+          content="Welcome to Shimmer Softech, At Shimmer Softech, we turn your digital dreams into reality. Our expert team specializes in creating stunning websites, robust web applications, and innovative mobile apps tailored to your unique needs"
+        />
+        <meta
+          name="keywords"
+          content="Website,App,Development,Domain,Ui,Ux,Design,Software"
+        />
+        <meta property="og:title" content="About Us - Shimmer Softech " />
+        <meta
+          property="og:description"
+          content="Discover more about us and mission behind Our Company."
+        />
+        <meta property="og:type" content="shimmersoftech" />
+        <meta property="og:url" content="https://shimmersoftech.com/about" />
+
+        <meta property="og:url" content="" />
+        <meta property="og:url" content="" />
+      </Helmet>
       <div className="flex items-center justify-center h-[40vh] bg-gradient-to-r from-black via-red-700 to-black">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white">

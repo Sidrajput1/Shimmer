@@ -4,9 +4,12 @@ import Package from "./Package";
 import snew4 from "../../assets/images/snew4.png";
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 
 function PriceCard() {
+
+  const navigate = useNavigate();
 
   useEffect(()=>{
     AOS.init({});
@@ -297,7 +300,8 @@ function PriceCard() {
                     </p>
                   </div>
                 </div>
-                <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition">
+                <a href="https://schoolumpire.com/" target="_blank">
+                <div  className="rounded-lg cursor-pointer overflow-hidden shadow-lg transform hover:scale-105 transition">
                   <img
                     src="https://img.freepik.com/free-vector/flat-university-concept_23-2148174524.jpg?t=st=1732787578~exp=1732791178~hmac=f50840f6ba81e1ebd52c09fb6d9772d43b1a756c4a62dcd017dd0354ffa4a08d&w=740"
                     alt="Project 2"
@@ -313,6 +317,7 @@ function PriceCard() {
                     </p>
                   </div>
                 </div>
+                </a>
                 <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition">
                   <img
                     src="https://img.freepik.com/free-vector/various-screens-violet-public-transport-mobile-app_23-2148704862.jpg?t=st=1732787677~exp=1732791277~hmac=996e50aa5eac03db3a00d4343d2b60d9797635a3a49b0d26b4949fd2433c63e8&w=1380"
@@ -330,7 +335,7 @@ function PriceCard() {
                 </div>
               </div>
               <div className="mt-6 text-end text-white text-xl cursor-pointer">
-                <span>Click here to</span> <button className="text-blue-300 hover:text-blue-600">Know More?</button>
+                <span>Click here to</span> <button onClick={()=>navigate('/portfolio')} className="text-blue-300 hover:text-blue-600">Know More?</button>
               </div>
             </div>
           </div>

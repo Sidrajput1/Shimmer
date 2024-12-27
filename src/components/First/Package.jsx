@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function Package() {
     const [showMore,setShowMore] = useState();
+    const navigate = useNavigate();
   return (
     <div>
       {/* Header Section */}
@@ -51,7 +53,7 @@ function Package() {
             </ul>
           </div>
           <div className="px-6 py-8 bg-gray-100">
-            <button className="block w-full bg-yellow-500 text-white text-center font-medium py-3 rounded-md hover:bg-yellow-400">
+            <button onClick={()=>navigate('/web-dev')} className="block w-full bg-yellow-500 text-white text-center font-medium py-3 rounded-md hover:bg-yellow-400">
               START NOW
             </button>
           </div>
@@ -85,7 +87,7 @@ function Package() {
             </ul>
           </div>
           <div className="px-6 py-8 bg-gray-100">
-            <button className="block w-full bg-blue-600 text-white text-center font-medium py-3 rounded-md hover:bg-blue-500">
+            <button onClick={()=>navigate('/web-dev')} className="block w-full bg-blue-600 text-white text-center font-medium py-3 rounded-md hover:bg-blue-500">
               START NOW
             </button>
           </div>

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { CiCircleChevLeft, CiCircleChevRight } from 'react-icons/ci';
+import { transform } from "framer-motion";
+import React, { useState } from "react";
+import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 
-function Slider({ images,titles,links }) {
-    const [currentIndex, setCurrentIndex] = useState(0);
+function Slider({ images, titles, links }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
     setCurrentIndex((currentIndex + 1) % images.length);
@@ -12,19 +13,22 @@ function Slider({ images,titles,links }) {
     setCurrentIndex((currentIndex - 1 + images.length) % images.length);
   };
   return (
-    <div className="relative p-8 mt-8  bg-neutral-950 rounded-lg ">
-      <div className="overflow-hidden">
+    <div className="relative p-8 px-20 mt-8   rounded-lg ">
+      <div className="overflow-hidden shadow-2xl shadow-white">
         <div
-          className="flex gap-2   transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${(currentIndex * 100) / 3}%)` }}
+          className="flex gap-4   transition-transform duration-500 ease-in-out"
+          style={{
+            transform: `translateX(-${(currentIndex * 100) / 1}%)`,
+            md: { transform: `translateX(-${(currentIndex * 100) / 3}%)` },
+          }}
         >
           {images.map((image, index) => (
             <div
               key={index}
-              className="w-[26rem] h-80 flex-shrink-0 border-2 border-x-orange-300 "
-              style={{ flex: "0 0 33.33%" }}
+              className="md:w-[26rem] w-full h-96 flex-shrink-0 hover:scale-105 transition-transform duration-200 border-x-2 border-dotted  border-x-rose-600 "
+              style={{ md: { flex: "0 0 33.33%" }, flex: "0 0 33%" }}
             >
-              <div className="h-[70%]  relative">
+              <div className="h-[80%]  relative">
                 <img
                   src={image}
                   alt={`Image ${index}`}
@@ -34,12 +38,12 @@ function Slider({ images,titles,links }) {
                   <h3 className="text-lg font-semibold">{titles[index]}</h3>
                 </div>
               </div>
-              <div className="mt-4 text-center">
+              <div className="mt-4 text-center ">
                 <a
                   href={links[index]}
-                  target='_blank'
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-800 bg-blue-100 hover:bg-blue-200 py-2 px-4 rounded-full transition duration-300 inline-block"
+                  className="text-blue-800 cursor-pointer bg-blue-300 hover:bg-blue-200 py-2 px-4 rounded-full transition duration-300 inline-block"
                 >
                   View Site
                 </a>
@@ -58,10 +62,10 @@ function Slider({ images,titles,links }) {
         onClick={handleNext}
         className="absolute right-0 top-1/2 transform -translate-y-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg"
       >
-       <CiCircleChevLeft />
+        <CiCircleChevLeft />
       </button>
     </div>
-  )
+  );
 }
 
-export default Slider
+export default Slider;

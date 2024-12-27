@@ -47,7 +47,7 @@
 	}
 	 */
 
-	 .neon-effect {
+	 /* .neon-effect {
 		position: relative;
 		text-shadow: 0 0 5px #fff, 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
 		transition: text-shadow 0.3s ease, color 0.3s ease;
@@ -60,5 +60,52 @@
 	  
 	  .group-hover .neon-effect {
 		text-shadow: 0 0 10px #fff, 0 0 20px #ff6b6b;
+	  } */
+
+	  .navel {
+		padding: 6px; /* Keep padding consistent */
+		border-radius: 15%; /* Consistent border-radius */
+		transition: background-color 0.3s, color 0.3s;
+		 /* Smooth transitions */
+		 font-weight: 700;
 	  }
 	  
+	  .navel:hover{
+		background-color: #e41414b1;
+		/* padding: 8px; */
+		color: aliceblue;
+		/* border-radius: 5%; */
+		/* border:2px solid rgb(247, 247, 20); */
+		animation-name: smoothBounce;
+		animation-timing-function: ease-in-out;
+		animation-duration: 1s;
+    animation-iteration-count: 2s;
+	transform-origin: center;
+	  }
+
+	  /* @keyframes bounce {
+		0% {
+			transform: translateX(0);
+		}
+		50%{
+			transform: translatey(-10px);
+		}
+		100%{
+			transform: translateX(0px);
+		}
+	  } */
+
+	  @keyframes smoothBounce {
+		0% {
+		  transform: scale(1) translateY(0);
+		}
+		30% {
+		  transform: scale(1.1) translateY(-10px);
+		}
+		60% {
+		  transform: scale(0.95) translateY(5px);
+		}
+		100% {
+		  transform: scale(1) translateY(0);
+		}
+	  }

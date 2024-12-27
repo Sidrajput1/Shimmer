@@ -21,7 +21,7 @@ function Ceo() {
             Meet Our <span className="text-orange-700">Founder</span>
           </h2>
           <p className="text-lg leading-relaxed">
-            John Doe, the visionary behind our company, has over 20 years of
+            Mr Pk Sinha, the visionary behind our company, has over 20 years of
             experience in technology innovation. Passionate about creating
             transformative digital solutions, he has spearheaded countless
             projects that have reshaped the IT landscape globally.

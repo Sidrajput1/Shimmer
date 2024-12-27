@@ -44,9 +44,9 @@ function BeforeHome() {
         id="main"
         className=" opacity-100 h-screen flex justify-center items-center  "
       >
-        <div className=" absolute md:right-16 right-8 md:top-28 top-24 ">
-          <header className="md:text-5xl text-2xl text-justify  font-sans rounded-xl z-20 ">
-            <span className="text-orange-500 font-bold tracking-[0.3rem]">
+        <div className=" absolute md:right-16 right-8 md:top-28 top-24 md:block hidden ">
+          <header className="md:text-5xl text-2xl text-justify  font-sans rounded-xl -z-20 ">
+            <span className="text-orange-500 font-bold tracking-[0.3rem] ">
               SHIMMER
             </span>{" "}
             <span className="text-sky-600 font-bold tracking-[0.3rem]">
@@ -90,18 +90,18 @@ function BeforeHome() {
           </div>
 
           {/* Top-Left Image */}
-          <div className="absolute top-36 left-10 transform -rotate-6 z-0">
+          <div className="absolute md:block hidden top-36 left-10 transform -rotate-6 z-0">
             <img
               src={mockupdash}
               alt="Mockup Dash"
               width={300}
               height={200}
-              className="rounded-lg shadow-lg scale-100 hover:scale-105 transition-transform duration-500"
+              className="rounded-lg  shadow-lg scale-100 hover:scale-105 transition-transform duration-500"
             />
           </div>
 
           {/* Top-Right Image */}
-          <div className="absolute top-36 right-16 transform rotate-6 z-0">
+          <div className="absolute md:block hidden top-36 right-16 transform rotate-6 z-0">
             <img
               src={mockupumtab}
               alt="Mockup UmTab"
@@ -112,7 +112,7 @@ function BeforeHome() {
           </div>
 
           {/* Bottom-Left Image */}
-          <div className="absolute bottom-20 left-24  transform rotate-3 z-10">
+          <div className="absolute md:block hidden bottom-20 left-24  transform rotate-3 z-10">
             <img
               src={mockupreal}
               alt="Mockup Real"
@@ -123,7 +123,7 @@ function BeforeHome() {
           </div>
 
           {/* Bottom-Right Image */}
-          <div className="absolute bottom-24 right-10 transform -rotate-3 z-0">
+          <div className="absolute md:block hidden bottom-24 right-10 transform -rotate-3 z-0">
             <img
               src={mockupstab}
               alt="Mockup Stab"
@@ -134,8 +134,8 @@ function BeforeHome() {
           </div>
         </div>
       </main>
-      <PriceCard/>
-      <ServiceSection/>
+      <PriceCard />
+      <ServiceSection />
     </div>
   );
 }

@@ -2,10 +2,12 @@ import React from "react";
 import app from "../../assets/images/app.webp";
 import web from "../../assets/images/web.avif";
 import hosting from "../../assets/images/hosting.avif";
+import { useNavigate } from "react-router-dom";
 
 function ShortContent() {
+  const navigate = useNavigate();
   return (
-    <div className="flex justify-around gap-5 px-8">
+    <div className="flex md:flex-row flex-col justify-around gap-5 px-8">
       <div
         className="p-8 max-w-sm bg-black   border border-orange-600 rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center"
         href="#"
@@ -26,6 +28,7 @@ function ShortContent() {
           </p>
           <div className="mt-5">
             <button
+              onClick={() => navigate('/app-development')}
               type="button"
               className="inline-flex items-center rounded-md border border-transparent bg-gray-800 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900"
             >
@@ -55,6 +58,7 @@ function ShortContent() {
           </p>
           <div className="mt-5">
             <button
+              onClick={()=>navigate('/web-dev')}
               type="button"
               className="inline-flex items-center rounded-md border border-transparent bg-gray-800 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900"
             >

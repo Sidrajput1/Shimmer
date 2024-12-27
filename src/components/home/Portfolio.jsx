@@ -8,6 +8,14 @@ import s5 from "../../assets/images/s5.png";
 import s6 from "../../assets/images/s6.png";
 import s7 from "../../assets/images/s7.png";
 import s8 from "../../assets/images/s8.png";
+import umpire from '../../assets/images/umpire.png';
+import longump from '../../assets/images/longump.png'
+import longvivek from '../../assets/images/longvivek.jpeg';
+import longsan from '../../assets/images/longsan.jpeg';
+import longgvs from '../../assets/techs/longgvs.jpeg';
+import longfuel from '../../assets/techs/longfuel.png';
+import long_st from '../../assets/techs/long_st.jpeg';
+import grocery1 from '../../assets/techs/grocery1.jpeg';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
@@ -16,23 +24,24 @@ import Slider from "./Slider";
 import { useNavigate } from "react-router-dom";
 import Wave from "react-wavify";
 
-const images = [s1, s3, s5, s6, s7, s8, s4, s2];
+const images = [longump, longvivek, longsan, longgvs, longfuel, long_st, grocery1];
 
 const titles = [
   "School Umpire",
-  "A Ngo",
-  "Grocery",
-  "Vivekanand Girukul",
-  "Prodigy Classes",
-  "Sandeep Memorial School",
-  "Gyan Vidya International School",
+  "Vivekanand Gurukul",
+  "SMS",
+  "GVS",
+  "Sri Sai Fuel",
   "St Marx Academy",
+  "Sri Sai trader",
+  
 ];
+
 
 const links = [
   "https://schoolumpire.com",
-  "https://ango.com",
-  "https://grocery.com",
+  "https://vivekanandgurukul.in/",
+  "https://srisaitrader.in/",
   "https://vivekanandgirukul.com",
   "https://prodigyclasses.com",
   "https://sandeepmemorialschool.com",
@@ -91,26 +100,26 @@ function Portfolio() {
           }}
         /> */}
       </div>
-      <div className="py-8 relative bg-black">
-      <Wave
+      <div className="py-16  relative bg-black">
+      {/* <Wave
         fill="#34a1eb"
         paused={false}
         style={{ display: 'block', position: 'relative', zIndex: 1 }}
         options={{
-          height: 20,
-          amplitude: 40,
+          height: 30,
+          amplitude: 60,
           speed: 0.15,
           points: 3,
         }}
-      />
-        <div
+      /> */}
+        {/* <div
         className="absolute inset-0 bottom-96 flex justify-center items-center"
         style={{ zIndex: 20 }}
-      >
+      > */}
         <h2 className="text-center text-5xl font-bold text-orange-700">
           Our <span className="text-white">Work</span>
         </h2>
-      </div>
+      {/* </div> */}
     
        <Slider images={images} titles={titles} links={links} />
         <div>

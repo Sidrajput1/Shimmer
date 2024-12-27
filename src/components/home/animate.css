@@ -1,0 +1,12 @@
+.btn:hover .icon{
+   
+    color: aliceblue;
+    transform: rotateY(360deg);
+    
+}
+.icon{
+    position: relative;
+  /* color: #262626; */
+    z-index: 3;
+    transition: .5s;
+}

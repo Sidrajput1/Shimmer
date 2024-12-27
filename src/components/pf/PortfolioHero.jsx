@@ -1,5 +1,8 @@
 import React from "react";
 import { ExternalLink } from "lucide-react";
+import { Helmet } from "react-helmet";
+import s3 from '../../assets/images/s3.png';
+import umpire from '../../assets/images/umpire.png';
 
 function PortfolioHero() {
   // const projects = [
@@ -76,7 +79,7 @@ function PortfolioHero() {
       description:
         "A dynamic school website built with a content management system, allowing easy updates to events, announcements, and academic content.",
       image:
-        "https://images.unsplash.com/photo-1515777315835-281b94c95816?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://i.pinimg.com/736x/45/b5/55/45b555d37a26df1c3d652ff62832c886.jpg",
       link: "#",
     },
     {
@@ -85,7 +88,7 @@ function PortfolioHero() {
       description:
         "A fully functional website for NGOs featuring an admin panel for managing donations, volunteer sign-ups, and event tracking.",
       image:
-        "https://images.unsplash.com/photo-1603791440384-56cd371ee9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        s3,
       link: "#",
     },
     {
@@ -94,7 +97,7 @@ function PortfolioHero() {
       description:
         "A responsive eCommerce website tailored for grocery businesses, featuring product catalogs, online ordering, and delivery management.",
       image:
-        "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://i.pinimg.com/736x/0b/57/93/0b5793a8773dc0dac0b0ad84838a5540.jpg",
       link: "#",
     },
     {
@@ -112,13 +115,34 @@ function PortfolioHero() {
       description:
         "A platform for restaurants offering features like online reservations, digital menus, and order tracking for dine-in or delivery.",
       image:
-        "https://images.unsplash.com/photo-1601924582975-9346b6d8c21c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "https://i.pinimg.com/736x/e5/e5/4e/e5e54e7f4e852a95da90e76d7794f220.jpg",
       link: "#",
     },
   ];
   
   return (
     <div>
+        <Helmet>
+        <title>portfolio - Shimmer Softech</title>
+        <meta
+          name="description"
+          content="Welcome to Shimmer Softech, At Shimmer Softech, we turn your digital dreams into reality. Our expert team specializes in creating stunning websites, robust web applications, and innovative mobile apps tailored to your unique needs"
+        />
+        <meta
+          name="keywords"
+          content="Website,App,Development,Domain,Ui,Ux,Design,Software"
+        />
+        <meta property="og:title" content="About Us - Shimmer Softech " />
+        <meta
+          property="og:description"
+          content="Discover more about us and mission behind Our Company."
+        />
+        <meta property="og:type" content="shimmersoftech" />
+        <meta property="og:url" content="https://shimmersoftech.com/about" />
+
+        <meta property="og:url" content="" />
+        <meta property="og:url" content="" />
+      </Helmet>
       <section className="relative py-32 bg-gradient-to-r from-black  to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

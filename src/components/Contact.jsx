@@ -1,8 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 
 function Contact() {
+  const [formData,setFormData] = useState({
+    name:'',
+    mobile_no:'',
+    email:'',
+    message:''
+  });
+
+  const handleChange = (e) => {
+    const {name,value} = e.target;
+
+    setFormData({
+      ...formData,
+      [name]:value
+    });
+  };
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+
+      try {
+        const response = await fetch('https://shimmersoftech.com//api/sendingmail.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+  
+        if (response.ok) {
+            alert('Message sent successfully!');
+        } else {
+            alert('Failed to send message.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error sending the message.');
+    }
+  }
   return (
     <div className="bg-black h-screen">
+       <Helmet>
+        <title>Contact - Shimmer Softech</title>
+        <meta
+          name="description"
+          content="Welcome to Shimmer Softech, At Shimmer Softech, we turn your digital dreams into reality. Our expert team specializes in creating stunning websites, robust web applications, and innovative mobile apps tailored to your unique needs"
+        />
+        <meta
+          name="keywords"
+          content="Website,App,Development,Domain,Ui,Ux,Design,Software"
+        />
+        <meta property="og:title" content="About Us - Shimmer Softech " />
+        <meta
+          property="og:description"
+          content="Discover more about us and mission behind Our Company."
+        />
+        <meta property="og:type" content="shimmersoftech" />
+        <meta property="og:url" content="https://shimmersoftech.com/about" />
+
+        <meta property="og:url" content="" />
+        <meta property="og:url" content="" />
+      </Helmet>
       {/* <div className="bg-black text-gray-100 px-8 py-12">
         <form>
           <div className="text-center text-5xl w-full">Contact Us</div>
@@ -1022,7 +1082,7 @@ function Contact() {
           </div>
         </form>
       </div> */}
-      <section className="relative z-10 mt-0 overflow-hidden bg-black py-20 dark:bg-dark lg:py-[120px]">
+      <section className="relative z-0 mt-0 overflow-hidden bg-black py-20 dark:bg-dark lg:py-[120px]">
         <div className="container  m-auto">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
@@ -1034,9 +1094,7 @@ function Contact() {
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="mb-9 text-base text-justify leading-relaxed text-white dark:text-dark-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eius tempor incididunt ut labore e dolore magna aliqua. Ut
-                  enim adiqua minim veniam quis nostrud exercitation ullamco
+                  Have any project in your mind? We are here to help you.please feel free to ask any questions and react us. 
                 </p>
                 <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-orange-700 text-white sm:h-[70px] sm:max-w-[70px]">
@@ -1131,27 +1189,34 @@ function Contact() {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form>
+                <form onSubmit={handleSubmit}>
                   <ContactInputBox
                     type="text"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Your Name"
                   />
                   <ContactInputBox
                     type="text"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Your Email"
                   />
                   <ContactInputBox
                     type="text"
-                    name="phone"
+                    name="mobile_no"
+                    value={formData.mobile_no}
+                    onChange={handleChange}
                     placeholder="Your Phone"
                   />
                   <ContactTextArea
                     row="6"
                     placeholder="Your Message"
-                    name="details"
-                    defaultValue=""
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                   <div>
                     <button
@@ -1981,7 +2046,7 @@ function Contact() {
 
 export default Contact;
 
-const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
+const ContactTextArea = ({ row, placeholder, name, value ,onChange}) => {
   return (
     <>
       <div className="mb-6">
@@ -1990,14 +2055,15 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
           placeholder={placeholder}
           name={name}
           className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
-          defaultValue={defaultValue}
+          value={value}
+          onChange={onChange}
         />
       </div>
     </>
   );
 };
 
-const ContactInputBox = ({ type, placeholder, name }) => {
+const ContactInputBox = ({ type, placeholder, name,value ,onChange}) => {
   return (
     <>
       <div className="mb-6">
@@ -2005,6 +2071,8 @@ const ContactInputBox = ({ type, placeholder, name }) => {
           type={type}
           placeholder={placeholder}
           name={name}
+          value={value}
+          onChange={onChange}
           className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
         />
       </div>
