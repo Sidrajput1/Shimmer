@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import slogo from "../assets/images/slogo.webp";
 import { Link } from "react-router-dom";
-import shimmer from "../assets/images/shimmer.png";
+//import shimmer from "../assets/images/shimmer.png";
 
 function Nav2() {
   // const [open, setOpen] = useState(false);
@@ -168,7 +168,7 @@ function Nav2() {
       <div className="max-w-screen-xl z-50 flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center hover:animate-pulse space-x-3 rtl:space-x-reverse">
           <img
-            src={shimmer}
+            src=''
             className="h-8"
             alt="Shimmer Logo"
           />
