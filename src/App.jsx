@@ -10,7 +10,7 @@ import AboutPage from './components/about/AboutPage'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 import ProjectPage from './components/home/ProjectPage'
-import Nav2 from './components/Nav2'
+
 import Hero from './components/webdev/Hero'
 import Service from './components/about/Service'
 import PortfolioHero from './components/pf/PortfolioHero'
@@ -22,8 +22,8 @@ function App() {
 
   return (
     <>
-    {/* <Nav/> */}
-    <Nav2/>
+    <Nav/>
+   
     <ScrollToTop/>
      <Routes>
       <Route path='/' element={<BeforeHome/>}></Route>
