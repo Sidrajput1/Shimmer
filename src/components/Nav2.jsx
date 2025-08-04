@@ -41,16 +41,16 @@ function BeforeHome() {
 
   return (
     <div>
-      <main
+      {/* <main
         id="main"
         className="opacity-100 min-h-screen flex justify-center items-center relative overflow-hidden"
       >
-        {/* Morphing Background Elements */}
+      
         <div className="morphing-bg w-96 h-96 top-10 left-10"></div>
         <div className="morphing-bg w-80 h-80 bottom-20 right-20"></div>
         <div className="morphing-bg w-64 h-64 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
-        {/* Enhanced Particle System */}
+     
         {[...Array(50)].map((_, i) => (
           <div
             key={i}
@@ -64,7 +64,7 @@ function BeforeHome() {
           />
         ))}
 
-        {/* Floating Animation Elements */}
+       
         <motion.div 
           className="floating-element top-20 left-20 w-16 h-16 bg-gradient-to-r from-[#fb923ce6] to-[#44EBFF] rounded-full"
           animate={{ 
@@ -138,7 +138,7 @@ function BeforeHome() {
             </motion.div>
           </div>
 
-          {/* Top-Left Image */}
+        
           <div className="absolute md:block hidden top-36 left-10 transform -rotate-6 z-0 hover-lift">
                       className="block px-6 py-3 hover:bg-gradient-to-r hover:from-[#fb923ce6] hover:to-[#44EBFF] hover:text-white transition-all duration-300 rounded-xl mx-3 my-1 font-medium transform hover:scale-105 hover:shadow-md"
               src={mockupdash}
@@ -160,7 +160,7 @@ function BeforeHome() {
             />
           </div>
                 className="block py-3 px-6 rounded-xl md:hover:bg-transparent md:border-0 md:p-0 text-white font-bold hover:bg-gradient-to-r hover:from-[#fb923ce6] hover:to-[#44EBFF] transition-all duration-300 transform hover:scale-105"
-          {/* Bottom-Left Image */}
+
           <div className="absolute md:block hidden bottom-20 left-24 transform rotate-3 z-10 hover-lift">
             <img
               src={mockupreal}
@@ -171,7 +171,7 @@ function BeforeHome() {
             />
           </div>
 
-          {/* Bottom-Right Image */}
+      
           <div className="absolute md:block hidden bottom-24 right-10 transform -rotate-3 z-0 hover-lift">
             <img
               src={mockupstab}
@@ -182,7 +182,7 @@ function BeforeHome() {
             />
           </div>
         </div>
-      </main>
+      </main> */}
       <PriceCard />
       <ServiceSection />
       
